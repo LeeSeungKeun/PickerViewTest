@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SelectCar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="iQu-Oa-Sy1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lamborghini-aventador.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="wt2-ri-YvD">
+                                <rect key="frame" x="10" y="432" width="394" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="cpl-7G-ux2"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqv-PU-mir">
+                                <rect key="frame" x="0.0" y="161" width="414" height="241"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ihX-mL-lNW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jxx-T4-R2X"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Car" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZX-j8-EcT">
+                                <rect key="frame" x="10" y="64" width="394" height="77"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wt2-ri-YvD" secondAttribute="bottom" constant="130" id="0TX-9I-kpc"/>
+                            <constraint firstItem="iQu-Oa-Sy1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4pv-E4-mak"/>
+                            <constraint firstItem="aZX-j8-EcT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="HL9-Ok-QIy"/>
+                            <constraint firstItem="Sqv-PU-mir" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RhS-v2-h7d"/>
+                            <constraint firstItem="Sqv-PU-mir" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="dOQ-1D-UXp"/>
+                            <constraint firstItem="aZX-j8-EcT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eEd-MH-KGT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iQu-Oa-Sy1" secondAttribute="trailing" id="h4s-fr-KgY"/>
+                            <constraint firstItem="wt2-ri-YvD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lE7-MG-R6U"/>
+                            <constraint firstItem="wt2-ri-YvD" firstAttribute="top" secondItem="Sqv-PU-mir" secondAttribute="bottom" constant="30" id="mpi-s4-tsB"/>
+                            <constraint firstItem="wt2-ri-YvD" firstAttribute="centerX" secondItem="iQu-Oa-Sy1" secondAttribute="centerX" id="n9y-Sc-MnQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iQu-Oa-Sy1" secondAttribute="bottom" id="rQm-KA-c4G"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aZX-j8-EcT" secondAttribute="trailing" constant="10" id="rvW-VS-41T"/>
+                            <constraint firstItem="iQu-Oa-Sy1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sgn-A0-3pc"/>
+                            <constraint firstItem="Sqv-PU-mir" firstAttribute="top" secondItem="aZX-j8-EcT" secondAttribute="bottom" constant="20" id="x0U-3N-rKm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="carImgView" destination="wt2-ri-YvD" id="xQM-Yn-V7c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="338" y="108"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.jpeg" width="3264" height="2448"/>
+        <image name="lamborghini-aventador.jpg" width="712.5" height="474.75"/>
+    </resources>
+</document>
