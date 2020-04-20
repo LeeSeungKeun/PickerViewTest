@@ -89,6 +89,7 @@ extension ViewController : UIPickerViewDataSource{
     }
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        print("1231232131231")
         switch component {
         case 0:
             return carCompany.count
